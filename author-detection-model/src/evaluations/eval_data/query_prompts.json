@@ -1,0 +1,38 @@
+[
+    {
+        "id": "Q1",
+        "text": "\n                        Extract the names of all the authors, copyright holders, maintainers and contributers given in the text.\n                        Do not include any other information.\n                    ",
+        "type": "extract-name",
+        "about": "Extract name."
+    },
+    {
+        "id": "Q2",
+        "text": "\n                        You are a system for finding all authors, copyright holders, maintainers or contributors information from given text.\n\n                        Your are given a text that includes texts from various parts of a source code of a project.\n                        You must return your response as separate lines. Each line must contain only name. Each name must be present inside the text.\n                        Do not include any other information.\n                    ",
+        "type": "extract-name-with-context-input",
+        "about": "Query with context. Extract name."
+    },
+    {
+        "id": "Q3",
+        "text": "\n                        You are a system for finding all authors, copyright holders, maintainers or contributors information from given text.\n\n                        Your are given a text that includes texts from various parts of a source code of a project.\n                        You must return your response as separate lines. Each line must contain only name. Each name must be present inside the text.\n                        Do not include any other information.\n\n                        Example response:\n                            Kendall Riley\n                            James Trucker\n                            Kensley Keller\n\n                        Use above example response only as a reference for formatting your answer.\n                    ",
+        "type": "extract-name-with-context-and-example-input",
+        "about": "Query with context and example. Extract name."
+    },
+    {
+        "id": "Q4",
+        "text": "\n                        You are a system for finding all authors, copyright holders, maintainers or contributors information from given text.\n\n                        Your are given a text that includes texts from various parts of a source code of a project.\n                        Your task is to extract the names of all the authors, copyright holders, maintainers and contributers given in the text.\n                        You must return your response as separate lines. Each line must contain name and their role.\n                        Each name must be present inside the text.\n                        Role must be one of the following: author, maintainer, contributor, or copyright holder.\n                        Do not include any other information.\n\n                        Example response:\n                            Kendall Riley, Author\n                            James Trucker, Author\n                            Kensley Keller, Maintainer\n\n                        Use above example response only as a reference for formatting your answer.\n                    ",
+        "type": "extract-name-role-with-context-example-input",
+        "about": "Query with context and example. Extract name and role."
+    },
+    {
+        "id": "Q5",
+        "text": "\n                        You are a system for finding all authors, copyright holders, maintainers or contributors information from given text.\n\n                        Your are given a text that includes information from various parts of a source code of a project.\n                        Your task is to extract the names of all the persons that are authors, copyright holders, maintainers or contributers mentioned inside the text.\n\n                        Follow these guidelines for giving out your response:\n                            - Response must be in separate lines.\n                            - Each line must contain name, role and very short description about the contribution.\n                            - Each name must strictly must be present inside the text and must be a valid common name of an individual.\n                            - Each name must be in separate line. Names must not be grouped together based on their role or contribution.\n                            - Role must be one of the following: author, maintainer, contributor, or copyright holder.\n                            - Description of the contribution must be understandable and less that 5 words if possible.\n\n                        Do not return answers in any other format.\n                    ",
+        "type": "extract-name-role-description-with-context-guideline-input",
+        "about": "Query with context and guideline. Extract name, role, and contribution."
+    },
+    {
+        "id": "Q6",
+        "text": "\n                        You are a system for finding all authors, copyright holders, maintainers or contributors information from given text.\n\n                        Your are given a text that includes information from various parts of a source code of a project.\n                        Your task is to extract the names of all the persons that are authors, copyright holders, maintainers or contributers mentioned inside the text.\n\n                        Follow these guidelines for giving out your response:\n                            - Response must be in separate lines.\n                            - Each line must contain name, role and very short description about the contribution.\n                            - Each name must strictly must be present inside the text and must be a valid common name of an individual or an organization.\n                            - Variables or flags inside the program code must not be identified as name.\n                            - Names must not be grouped together based on their role or contribution. Each name must be in separate line.\n                            - Role must be one of the following: author, maintainer, contributor, or copyright holder.\n                            - Description of the contribution must be understandable and less that 5 words if possible.\n\n                        Do not return answers in any other format.\n\n                        Example Response:\n                            Kendall Riley, Author, Wrote abc.py\n                            James Trucker, Author, code.c\n                            Kensley Keller, Maintainer, Maintained project ABC until 2007\n\n                        Do not return answers in any other format and use above example response only as a reference for formatting your answer.\n                    ",
+        "type": "extract-name-role-description-with-context-guideline-example-input",
+        "about": "Query with context, guideline and example. Extract name, role, and contribution."
+    }
+]

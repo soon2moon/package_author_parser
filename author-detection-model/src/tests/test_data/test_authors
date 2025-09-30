@@ -1,0 +1,17 @@
+John Doe wrote the main program and the ABC and KEC matchers. Roberta Colon contributed the heuristics for finding fixed substrings
+at the end of abc.py.
+
+Henry Spencer wrote the original test suite from which grep's was derived.
+Mortimer Fairbank invented the Khadafy test.
+
+Jack Valdez contributed to improve abc.py. In fact
+it came straight from xyz with small editing and fixes.
+
+Many folks contributed.  See THANKS; if I omitted someone please
+send me email.
+
+Hanley Bond  maintained GNU grep until version 2.5e.
+
+;; Local Variables:
+;; coding: utf-8
+;; End:
