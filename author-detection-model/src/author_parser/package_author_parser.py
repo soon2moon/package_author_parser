@@ -157,8 +157,10 @@ class PackageParser():
     @store_timing("get_file_list_duration")
     def get_file_list(self, path, size, offset):
         """Retrieve a list of files from the given path, applying an offset and size limit."""
-        recursive_path = os.path.join(path, "**")        
-        files = sorted([file for file in glob(recursive_path) if os.path.isfile(file)])
+        if os.path.isfile(path):
+            return [path]
+        recursive_path = os.path.join(path, "**")
+        files = sorted([file for file in glob(recursive_path, recursive=True) if os.path.isfile(file)])
         return files[offset:offset+size]
 
 
