@@ -164,7 +164,7 @@ class PackageParser():
 
     def load_documents(self, files):
         # Load document data from the given files
-        documents = SimpleDirectoryReader(input_files=files).load_data(num_workers = 8)
+        documents = SimpleDirectoryReader(input_files=files).load_data()
         filtered_documents = self.filter_documents(documents)
         return filtered_documents
 
