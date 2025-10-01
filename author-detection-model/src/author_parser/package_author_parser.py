@@ -288,12 +288,18 @@ class PackageParser():
 
     def set_system_prompt_template(self, system_prompt_template):
         """Sets system query template for instructing Chat-Bot."""
-        self.query_prompt_template = ChatPromptTemplate(
-            message_templates=[
-                ChatMessage(role=MessageRole.SYSTEM, content=system_prompt_template),
-                ChatMessage(role=MessageRole.USER, content=DEFAULT_TEXT_QA_PROMPT_TMPL),
-            ]
-        )
+        if not system_prompt_template or system_prompt_template.strip() == "":
+            # Verwende LlamaIndex Default Template - komplett ohne Custom Prompt
+            self.query_prompt_template = None
+            self.query_prompt_template_str = "DEFAULT_LLAMAINDEX_TEMPLATE"
+        else:
+            self.query_prompt_template = ChatPromptTemplate(
+                message_templates=[
+                    ChatMessage(role=MessageRole.SYSTEM, content=system_prompt_template),
+                    ChatMessage(role=MessageRole.USER, content=DEFAULT_TEXT_QA_PROMPT_TMPL),
+                ]
+            )
+            self.query_prompt_template_str = system_prompt_template
 
 def main(package_path):
 
